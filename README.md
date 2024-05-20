@@ -1,1 +1,1 @@
-# Handwriting-Recognition-and-Identification-LT-
+# Handwriting-Recognition-and-Identification-LT
