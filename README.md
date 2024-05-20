@@ -1,0 +1,1 @@
+# Owner-avatar-Handwriting-Recognition-and-Identification-LT-
