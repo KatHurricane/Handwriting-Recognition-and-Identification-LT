@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # Set Tesseract path and language configuration
-pytesseract.pytesseract.tesseract_cmd = r'path_to_tesseract_executable'  # Update this path
+pytesseract.pytesseract.tesseract_cmd = r'/usr/local/bin/tesseract'
 tessdata_dir_config = '--tessdata-dir "tessdata" -l lit'
 
 # Ensure the directory to save letters exists
@@ -14,20 +14,6 @@ if not os.path.exists(output_dir):
 
 # Specify the input directory
 input_dir = 'input_images'
-
-# Function to pad and resize the letter image to 25x25
-def pad_and_resize(letter_img, size=25):
-    h, w = letter_img.shape
-    scale = size / max(h, w)
-    new_h, new_w = int(h * scale), int(w * scale)
-    resized_letter = cv2.resize(letter_img, (new_w, new_h), interpolation=cv2.INTER_AREA)
-    
-    # Create a new image of the desired size with white background
-    padded_letter = np.ones((size, size), dtype=np.uint8) * 255
-    pad_h, pad_w = (size - new_h) // 2, (size - new_w) // 2
-    
-    padded_letter[pad_h:pad_h+new_h, pad_w:pad_w+new_w] = resized_letter
-    return padded_letter
 
 # Iterate over each image in the input directory
 for image_filename in os.listdir(input_dir):
@@ -60,12 +46,9 @@ for image_filename in os.listdir(input_dir):
             # Extract the letter using the bounding box coordinates
             letter = gray[y:y+h, x:x+w]
 
-            # Pad and resize the letter to 25x25 pixels
-            padded_resized_letter = pad_and_resize(letter, size=25)
-
-            # Save the padded and resized letter as an image
+            # Save the letter as an image
             letter_filename = os.path.join(output_dir, f'{os.path.splitext(image_filename)[0]}_letter_{i}.png')
-            cv2.imwrite(letter_filename, padded_resized_letter)
+            cv2.imwrite(letter_filename, letter)
 
             letter_image_region.append((x, y, w, h))
 
