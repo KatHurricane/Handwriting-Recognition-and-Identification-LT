@@ -43,6 +43,11 @@ for image_filename in os.listdir(input_dir):
 
             # Get the bounding box for the contour
             x, y, w, h = cv2.boundingRect(contour)
+            
+            # Skip small dimensions
+            if w < 30 or h < 30:
+                continue
+
             # Extract the letter using the bounding box coordinates
             letter = gray[y:y+h, x:x+w]
 
