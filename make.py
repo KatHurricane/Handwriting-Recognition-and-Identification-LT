@@ -2,6 +2,23 @@ import os
 import numpy as np
 import tensorflow as tf
 from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
+from PIL import Image
+
+# Function to add padding to the image
+def add_padding(image, target_size=(128, 128)):
+    width, height = image.size
+    target_width, target_height = target_size
+
+    # Calculate padding
+    delta_width = target_width - width
+    delta_height = target_height - height
+    padding = (delta_width // 2, delta_height // 2, delta_width - (delta_width // 2), delta_height - (delta_height // 2))
+
+    # Add padding with white background
+    new_image = Image.new('RGB', target_size, (255, 255, 255))
+    new_image.paste(image, padding[:2])
+    
+    return new_image
 
 # Set up the ImageDataGenerator with desired augmentations
 datagen = ImageDataGenerator(
@@ -26,8 +43,11 @@ for image_name in os.listdir(input_dir):
     if image_name.endswith('.png'):  # You can add other image formats if needed
         image_path = os.path.join(input_dir, image_name)
         
-        # Load the image and convert it to an array
-        img = load_img(image_path, target_size=(128, 128))  # Resize as necessary
+        # Load the image
+        img = Image.open(image_path)
+        img = add_padding(img, target_size=(128, 128))
+        
+        # Convert the image to an array
         x = img_to_array(img)
         x = np.expand_dims(x, axis=0)  # Expand dimensions to create a batch
 
