@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
+from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
 
 # Set up the ImageDataGenerator with desired augmentations
 datagen = ImageDataGenerator(
