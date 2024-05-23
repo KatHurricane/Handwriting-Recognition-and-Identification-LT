@@ -3,7 +3,7 @@ import pytesseract
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 # Define the path to the directory containing images
-image_directory = 'aaaaa'
+image_directory = 'temp'
 
 # Set the path to the tesseract executable (update this if necessary)
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'  # Adjust this path if needed
@@ -40,9 +40,10 @@ for filename in os.listdir(image_directory):
         # Use pytesseract to do OCR on the image, specifying the Lithuanian language
         text = pytesseract.image_to_string(img, lang='lit', config='--psm 10').strip()
         
-        # Check if the text contains only alphabetic characters
-        if text.isalpha():
-            letter = text[0]
+        # Extract the first alphabetic character from the text
+        letter = next((char for char in text if char.isalpha()), None)
+        
+        if letter:
             extension = filename.split('.')[-1]  # Keep the original file extension
             new_filename = get_unique_filename(image_directory, letter, extension)
             new_file_path = os.path.join(image_directory, new_filename)
@@ -56,9 +57,7 @@ for filename in os.listdir(image_directory):
             
             print(f"Renamed {filename} to {new_filename} and deleted the original file.")
         else:
-            # Delete the image if it contains symbols or numbers
-            os.remove(file_path)
-            print(f"Deleted {filename} because it contains symbols or numbers.")
+            print(f"Could not extract a valid letter from {filename}. Leaving the file unchanged.")
     
     except Exception as e:
         print(f"Error processing {filename}: {e}. Leaving the file unchanged.")
