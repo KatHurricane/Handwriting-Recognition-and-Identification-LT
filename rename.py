@@ -3,7 +3,7 @@ import pytesseract
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 # Define the path to the directory containing images
-image_directory = 'input_synthetic_data'
+image_directory = 'aaaaa'
 
 # Set the path to the tesseract executable (update this if necessary)
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'  # Adjust this path if needed
