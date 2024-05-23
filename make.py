@@ -1,6 +1,5 @@
 import os
 import numpy as np
-import tensorflow as tf
 from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
 from PIL import Image
 
@@ -38,6 +37,10 @@ input_dir = './input_synthetic_data'
 save_dir = './augmented_images'
 os.makedirs(save_dir, exist_ok=True)
 
+# Function to generate a unique identifier
+def generate_unique_id():
+    return np.random.randint(10000, 99999)
+
 # Process each image in the directory
 for image_name in os.listdir(input_dir):
     if image_name.endswith('.png'):  # You can add other image formats if needed
@@ -51,11 +54,25 @@ for image_name in os.listdir(input_dir):
         x = img_to_array(img)
         x = np.expand_dims(x, axis=0)  # Expand dimensions to create a batch
 
+        # Extract base name of the image (without extension)
+        base_name = os.path.splitext(image_name)[0]
+
         # Flow method to generate augmented images
         i = 0
-        for batch in datagen.flow(x, batch_size=1, save_to_dir=save_dir, save_prefix='aug', save_format='png'):
+        for batch in datagen.flow(x, batch_size=1):
             i += 1
             if i > 20:  # Change this to the number of augmented images you want per input image
                 break
+
+            # Generate a unique filename for each augmented image
+            unique_id = generate_unique_id()
+            new_image_name = f"{base_name}_{unique_id}.png"
+            new_image_path = os.path.join(save_dir, new_image_name)
+
+            # Save the augmented image
+            augmented_image = batch[0] * 255
+            augmented_image = augmented_image.astype(np.uint8)
+            img_to_save = Image.fromarray(augmented_image)
+            img_to_save.save(new_image_path)
 
         print(f'Generated {i} augmented images for {image_name} and saved to {save_dir}')
