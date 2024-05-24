@@ -52,6 +52,7 @@ def save_counts_to_file(all_counts, total_file_counts, output_file):
 # List of directories to scan
 directories_to_scan = [
     './output_letters',
+    './--temp',
     './augmented_images',
     './input_synthetic_data'
 ]
