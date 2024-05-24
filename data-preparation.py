@@ -13,7 +13,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # Specify the input directory
-input_dir = 'input_images'
+input_dir = 'temp-input_images'
 
 # Iterate over each image in the input directory
 for image_filename in os.listdir(input_dir):

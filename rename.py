@@ -3,7 +3,7 @@ import pytesseract
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 # Define the path to the directory containing images
-image_directory = 'temp'
+image_directory = 'temp-output_letters'
 
 # Set the path to the tesseract executable (update this if necessary)
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'  # Adjust this path if needed
@@ -57,9 +57,11 @@ for filename in os.listdir(image_directory):
             
             print(f"Renamed {filename} to {new_filename} and deleted the original file.")
         else:
-            print(f"Could not extract a valid letter from {filename}. Leaving the file unchanged.")
+            # If no valid letter is found, delete the original file
+            os.remove(file_path)
+            print(f"Could not extract a valid letter from {filename}. File has been deleted.")
     
     except Exception as e:
         print(f"Error processing {filename}: {e}. Leaving the file unchanged.")
 
-print("Renaming process completed.")
+print("Renaming and cleanup process completed.")
