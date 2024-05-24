@@ -1,38 +1,38 @@
-A: ./output_letters=14 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=36
-Ą: ./output_letters=1 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=43
-B: ./output_letters=5 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=27
-C: ./output_letters=2 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=44
+A: ./output_letters=20 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
+Ą: ./output_letters=4 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=6
+B: ./output_letters=10 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=12
+C: ./output_letters=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=5
 Č: ./output_letters=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=3
-D: ./output_letters=8 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=30
-E: ./output_letters=14 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=56
-Ę: ./output_letters=0 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=22
+D: ./output_letters=11 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=13
+E: ./output_letters=17 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=19
+Ę: ./output_letters=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=2
 Ė: ./output_letters=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=4
 F: ./output_letters=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=3
-G: ./output_letters=3 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=25
-H: ./output_letters=0 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=42
-I: ./output_letters=7 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=29
-Į: ./output_letters=0 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=22
-Y: ./output_letters=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=3
-J: ./output_letters=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=3
-K: ./output_letters=11 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=33
-L: ./output_letters=2 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=24
-M: ./output_letters=15 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=37
-N: ./output_letters=10 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=52
-O: ./output_letters=5 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=47
-P: ./output_letters=8 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=30
-R: ./output_letters=8 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=50
-S: ./output_letters=13 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=15
+G: ./output_letters=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=5
+H: ./output_letters=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=2
+I: ./output_letters=7 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=9
+Į: ./output_letters=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=2
+Y: ./output_letters=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=4
+J: ./output_letters=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=4
+K: ./output_letters=17 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=19
+L: ./output_letters=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=4
+M: ./output_letters=20 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
+N: ./output_letters=22 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=24
+O: ./output_letters=10 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=12
+P: ./output_letters=20 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
+R: ./output_letters=10 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=12
+S: ./output_letters=20 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 Š: ./output_letters=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=5
-T: ./output_letters=10 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=32
-U: ./output_letters=8 ./augmented_images=40 ./input_synthetic_data=2 TOTAL=50
-Ų: ./output_letters=4 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=26
-Ū: ./output_letters=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=4
-V: ./output_letters=4 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=26
-Z: ./output_letters=4 ./augmented_images=20 ./input_synthetic_data=2 TOTAL=26
+T: ./output_letters=20 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
+U: ./output_letters=15 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=17
+Ų: ./output_letters=5 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
+Ū: ./output_letters=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=5
+V: ./output_letters=5 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
+Z: ./output_letters=5 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
 Ž: ./output_letters=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=3
 
 TOTAL FILE COUNTS:
-./output_letters: 168
-./augmented_images: 620
+./output_letters: 261
+./augmented_images: 0
 ./input_synthetic_data: 64
-GRAND TOTAL: 852
+GRAND TOTAL: 325

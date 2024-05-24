@@ -8,7 +8,7 @@ pytesseract.pytesseract.tesseract_cmd = r'/usr/local/bin/tesseract'
 tessdata_dir_config = '--tessdata-dir "tessdata" -l lit'
 
 # Ensure the directory to save letters exists
-output_dir = 'output_letters'
+output_dir = 'temp-output_letters'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
