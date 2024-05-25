@@ -1,39 +1,39 @@
 A: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 Ą: ./output_letters=7 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=9
-B: ./output_letters=13 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=15
+B: ./output_letters=15 ./--temp=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=19
 C: ./output_letters=4 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=6
 Č: ./output_letters=3 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=5
-D: ./output_letters=14 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=17
+D: ./output_letters=16 ./--temp=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=20
 E: ./output_letters=20 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=23
 Ę: ./output_letters=0 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=2
-Ė: ./output_letters=9 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=11
-F: ./output_letters=3 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=5
-G: ./output_letters=9 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=11
+Ė: ./output_letters=10 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=12
+F: ./output_letters=4 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
+G: ./output_letters=12 ./--temp=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=17
 H: ./output_letters=2 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=4
-I: ./output_letters=20 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=23
+I: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 Į: ./output_letters=5 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
-Y: ./output_letters=9 ./--temp=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=14
-J: ./output_letters=5 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
+Y: ./output_letters=10 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=13
+J: ./output_letters=6 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=9
 K: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-L: ./output_letters=9 ./--temp=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=14
+L: ./output_letters=12 ./--temp=3 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=17
 M: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 N: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-O: ./output_letters=15 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=18
+O: ./output_letters=20 ./--temp=5 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=27
 P: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-R: ./output_letters=18 ./--temp=4 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=24
-S: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-Š: ./output_letters=12 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=14
+R: ./output_letters=20 ./--temp=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=24
+S: ./output_letters=20 ./--temp=2 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=24
+Š: ./output_letters=14 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=16
 T: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 U: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 Ų: ./output_letters=9 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=11
 Ū: ./output_letters=5 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
-V: ./output_letters=8 ./--temp=1 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=11
+V: ./output_letters=8 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=10
 Z: ./output_letters=8 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=10
 Ž: ./output_letters=4 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=6
 
 TOTAL FILE COUNTS:
-./output_letters: 371
-./--temp: 15
+./output_letters: 394
+./--temp: 23
 ./augmented_images: 0
 ./input_synthetic_data: 64
-GRAND TOTAL: 450
+GRAND TOTAL: 481
