@@ -1,11 +1,11 @@
-A: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-Ą: ./output_letters=13 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=15
+A: ./output_letters=21 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=23
+Ą: ./output_letters=19 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=21
 B: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-C: ./output_letters=10 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=12
-Č: ./output_letters=7 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=9
+C: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
+Č: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 D: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 E: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-Ę: ./output_letters=0 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=2
+Ę: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 Ė: ./output_letters=16 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=18
 F: ./output_letters=11 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=13
 G: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
@@ -28,12 +28,12 @@ U: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 
 Ų: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 Ū: ./output_letters=5 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=7
 V: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
-Z: ./output_letters=10 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=12
-Ž: ./output_letters=14 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=16
+Z: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
+Ž: ./output_letters=20 ./--temp=0 ./augmented_images=0 ./input_synthetic_data=2 TOTAL=22
 
 TOTAL FILE COUNTS:
-./output_letters: 527
+./output_letters: 593
 ./--temp: 0
 ./augmented_images: 0
 ./input_synthetic_data: 64
-GRAND TOTAL: 591
+GRAND TOTAL: 657
