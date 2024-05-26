@@ -11,30 +11,19 @@ from keras._tf_keras.keras.utils import Sequence
 # Define the character set to include Lithuanian letters
 alphabet = "abcdefghijklmnopqrstuvwxyząčęėįšųūž"
 
-# Load data function
-def load_data(data_path):
+# Load individual letter images from multiple directories
+def load_letter_images(directories):
     images = []
     labels = []
-    for root, dirs, files in os.walk(data_path):
-        for file in files:
+    for directory in directories:
+        for file in os.listdir(directory):
             if file.endswith(".png") or file.endswith(".jpg"):
-                image_path = os.path.join(root, file)
-                label_path = image_path.replace(".png", ".txt").replace(".jpg", ".txt")
-                
+                letter = file.split('.')[0]
+                image_path = os.path.join(directory, file)
                 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-                with open(label_path, 'r', encoding='utf-8') as f:
-                    label = f.readline().strip()
-                
                 images.append(image)
-                labels.append(label)
-    
+                labels.append(letter)
     return images, labels
-
-# Load the training and validation data
-train_data_path = "input_synthetic_data/train"
-val_data_path = "input_synthetic_data/val"
-train_images, train_labels = load_data(train_data_path)
-val_images, val_labels = load_data(val_data_path)
 
 # Define CTC loss function
 def ctc_loss_function(y_true, y_pred):
@@ -43,7 +32,7 @@ def ctc_loss_function(y_true, y_pred):
     return ctc_batch_cost(y_true, y_pred, input_length, label_length)
 
 # Define model
-input_shape = (128, 32, 1)  # Example dimensions, adjust as needed
+input_shape = (32, 32, 1)  # Image dimensions for individual letters
 num_classes = len(alphabet) + 1  # Including CTC blank token
 
 inputs = Input(shape=input_shape)
@@ -94,9 +83,17 @@ class DataGenerator(Sequence):
         
         return X, Y
 
+# Load individual letter images from specified directories
+directories = ["input_synthetic_data", "augmented_images", "output_letters"]
+images, labels = load_letter_images(directories)
+
+# Split data into training and validation sets
+train_size = int(0.8 * len(images))
+train_images, val_images = images[:train_size], images[train_size:]
+train_labels, val_labels = labels[:train_size], labels[train_size:]
+
 # Training
 batch_size = 32
-input_shape = (128, 32, 1)
 
 train_generator = DataGenerator(train_images, train_labels, batch_size, alphabet, input_shape)
 val_generator = DataGenerator(val_images, val_labels, batch_size, alphabet, input_shape)
