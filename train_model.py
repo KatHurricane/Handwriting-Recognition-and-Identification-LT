@@ -98,7 +98,7 @@ batch_size = 32
 train_generator = DataGenerator(train_images, train_labels, batch_size, alphabet, input_shape)
 val_generator = DataGenerator(val_images, val_labels, batch_size, alphabet, input_shape)
 
-checkpoint = ModelCheckpoint('model.h5', monitor='val_loss', save_best_only=True, save_weights_only=False)
+checkpoint = ModelCheckpoint('model.keras', monitor='val_loss', save_best_only=True, save_weights_only=False)
 
 history = model.fit(train_generator,
                     validation_data=val_generator,

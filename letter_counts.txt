@@ -13,9 +13,9 @@ H: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
 I: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
 Į: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
 Y: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
-J: ./output_letters=20 ./augmented_images=97 ./input_synthetic_data=2 TOTAL=119
+J: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
 K: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
-L: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
+L: ./output_letters=20 ./augmented_images=97 ./input_synthetic_data=2 TOTAL=119
 M: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
 N: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
 O: ./output_letters=20 ./augmented_images=98 ./input_synthetic_data=2 TOTAL=120
