@@ -34,7 +34,7 @@ model_path = 'Models/model.keras'
 model = load_model(model_path, custom_objects={'ctc_loss_function': ctc_loss_function},safe_mode=False, compile=False)
 
 # Load some sample data
-directories = ["input_synthetic_data", "augmented_images", "output_letters"]
+directories = ["input_synthetic_data", "output_letters"] #"augmented_images", 
 images, labels = load_letter_images(directories)
 
 # Function to decode predictions
