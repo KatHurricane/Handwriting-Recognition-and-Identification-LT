@@ -34,7 +34,7 @@ model_path = 'Models/model.keras'
 model = load_model(model_path, custom_objects={'ctc_loss_function': ctc_loss_function},safe_mode=False, compile=False)
 
 # Load some sample data
-directories = ["input_synthetic_data", "output_letters"] #"augmented_images", 
+directories = ["input_synthetic_data", "augmented_images", "output_letters"]
 images, labels = load_letter_images(directories)
 
 # Function to decode predictions
@@ -42,12 +42,12 @@ def decode_prediction(pred, alphabet):
     pred_text = ''
     for p in pred:
         index = np.argmax(p)
-        if index != ctc_blank_index:
+        if index < len(alphabet):  # Ensure the index is within the valid range
             pred_text += alphabet[index]
     return pred_text
 
 # Visualize predictions
-def visualize_predictions(model, images, labels, alphabet, num_samples=5):
+def visualize_predictions(model, images, labels, alphabet, num_samples=15):
     plt.figure(figsize=(15, 5))
     
     for i in range(num_samples):

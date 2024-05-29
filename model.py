@@ -1,7 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 from keras import layers
-from keras.models import Model
+from keras._tf_keras.keras.models import Model
 from mltu.tensorflow.model_utils import residual_block
 
 
