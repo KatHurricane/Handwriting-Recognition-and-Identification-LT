@@ -8,10 +8,8 @@ from keras._tf_keras.keras.callbacks import ModelCheckpoint
 from keras._tf_keras.keras.backend import ctc_batch_cost
 from keras._tf_keras.keras.utils import Sequence
 
-# Define the character set to include Lithuanian letters
 alphabet = "abcdefghijklmnopqrstuvwxyząčęėįšųūž"
 
-# Load individual letter images from multiple directories
 def load_letter_images(directories):
     images = []
     labels = []
@@ -25,15 +23,13 @@ def load_letter_images(directories):
                 labels.append(letter)
     return images, labels
 
-# Define CTC loss function
 def ctc_loss_function(y_true, y_pred):
     input_length = np.ones((y_pred.shape[0], 1)) * y_pred.shape[1]
     label_length = np.ones((y_true.shape[0], 1)) * y_true.shape[1]
     return ctc_batch_cost(y_true, y_pred, input_length, label_length)
 
-# Define model
-input_shape = (32, 32, 1)  # Image dimensions for individual letters
-num_classes = len(alphabet) + 1  # Including CTC blank token
+input_shape = (32, 32, 1)  
+num_classes = len(alphabet) + 1  
 
 inputs = Input(shape=input_shape)
 x = Conv2D(32, (3,3), activation='relu', padding='same')(inputs)
@@ -50,7 +46,6 @@ model.compile(optimizer=Adam(), loss=ctc_loss_function)
 
 model.summary()
 
-# Define data generator
 class DataGenerator(Sequence):
     def __init__(self, images, labels, batch_size, alphabet, input_shape):
         self.images = images
@@ -83,16 +78,13 @@ class DataGenerator(Sequence):
         
         return X, Y
 
-# Load individual letter images from specified directories
 directories = ["input_synthetic_data", "augmented_images", "output_letters"]
 images, labels = load_letter_images(directories)
 
-# Split data into training and validation sets
 train_size = int(0.8 * len(images))
 train_images, val_images = images[:train_size], images[train_size:]
 train_labels, val_labels = labels[:train_size], labels[train_size:]
 
-# Training
 batch_size = 32
 
 train_generator = DataGenerator(train_images, train_labels, batch_size, alphabet, input_shape)
